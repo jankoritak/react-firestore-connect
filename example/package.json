@@ -10,7 +10,8 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-firestore-connect": "link:..",
-    "react-scripts": "^1.1.4"
+    "react-scripts": "^1.1.4",
+    "snyk": "^1.189.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,7 +23,9 @@
     "lint:fix": "eslint --ext .jsx,.js src/ --fix",
     "lint-staged": "lint-staged",
     "precommit": "lint-staged && flow",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "@webscopeio/eslint-config": "1.0.3",
@@ -46,5 +49,6 @@
     "linters": {
       "*.{js,jsx}": "eslint"
     }
-  }
+  },
+  "snyk": true
 }
